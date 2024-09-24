@@ -5,12 +5,11 @@
   background-color: #f0f8ff;
 }
 
-/* Small sidebar list in top-left */
 .sidebar-small {
   
   top: 20px;
-  left: 20px; /* Changed from right to left */
-  width: 200px;
+  left: 20px; 
+  width: 225px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -22,16 +21,18 @@
 
 .sidebar-small li {
   padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .sidebar-small li:hover {
-  background-color: #d9eaf8;
+  color: #22668E;
+  filter: brightness(0.8); /* Làm tối màu bằng cách giảm độ sáng */
+  font-size: 25px;
+
 }
 
-/* Right Content */
 .content {
   flex: 1;
   padding: 20px;
@@ -47,13 +48,12 @@
   color: #5F686E;
 }
 
-/* Personal Info Section */
 .personal-info {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 20px;
+  
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 0px 50px;
+  margin: 20px 50px;
 }
 
 /* Header with Avatar and Edit Button */
@@ -61,13 +61,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4a90e2;
+  background-color: rgba(34, 102, 142);
+  border-top-left-radius: 10px;  /* Bo góc ở phía trên bên trái */
+  border-top-right-radius: 10px; /* Bo góc ở phía trên bên phải */
+  
 }
 
 .avatar-section {
   display: flex;
   align-items: center;
-  background-color: #4a90e2;
+  background-color: #22668E;
   padding: 20px;
   border-radius: 8px;
   color: white;
@@ -86,16 +89,20 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #4a90e2;
+  background-color: #22668E;
+  color: white;
 }
 
 /* Info Section */
 .info {
   margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .info-item {
   margin-bottom: 15px;
+  padding: 0px 20px;
 }
 
 .label {
@@ -110,3 +117,11 @@
   color: #333;
   font-size: 16px;
 }
+hr{
+  margin: 0px 20px;
+}
+input {
+  width: calc(100% - 10px); /* Giảm chiều rộng bên phải đi 10px */
+  box-sizing: border-box;    /* Đảm bảo padding và border được tính trong width */
+}
+

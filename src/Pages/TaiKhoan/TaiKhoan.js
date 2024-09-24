@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './TaiKhoan.css'; // Add this to style the page
+import { useNavigate } from 'react-router-dom';
 
 function TaiKhoan() {
+
   const [user, setUser] = useState({
     name: 'Ngô Bảo',
     email: 'baongo@gmail.com',
@@ -10,10 +12,21 @@ function TaiKhoan() {
     phone: '',
   });
 
+  const navigate = useNavigate();
+
   const handleEdit = () => {
-    // Logic for editing user information
-    alert('Edit user info');
+    navigate('/capnhattaikhoan');
+
   };
+  const handleHoso = () => {
+    navigate('/hosobenhan');
+
+  };
+  const handleLogout = () => {
+    navigate('/trangchu');
+
+  };
+
 
   return (
     <div className="profile-container">
@@ -23,8 +36,8 @@ function TaiKhoan() {
         <li>Kết quả khám bệnh</li>
         <li>Lịch khám của tôi</li>
         <li>Thông báo</li>
-        <li>Hồ sơ bệnh án</li>
-        <li>Đăng xuất</li>
+        <li onClick={handleHoso}>Hồ sơ bệnh án</li>
+        <li onClick={handleLogout}>Đăng xuất</li>
       </ul>
 
       {/* Right Content */}
@@ -43,7 +56,7 @@ function TaiKhoan() {
 
           <div className="info">
             <div className="info-item">
-              <span className="label">Họ và tên</span>
+              <span className="label">Họ và tên</span> 
               <span className="value">{user.name}</span>
             </div>
             <hr/>

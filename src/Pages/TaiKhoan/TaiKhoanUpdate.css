@@ -22,13 +22,16 @@
   
   .sidebar-small li {
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
+    font-size: large;
   }
   
   .sidebar-small li:hover {
-    background-color: #d9eaf8;
+    color: #22668E;
+    filter: brightness(0.8); /* Làm tối màu bằng cách giảm độ sáng */
+    font-size: larger;
+
   }
   
   /* Right Content */
@@ -51,9 +54,9 @@
   .personal-info {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 20px;
+   
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 0px 50px;
+    
   }
   
   /* Header with Avatar and Edit Button */
@@ -61,13 +64,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4a90e2;
+    background-color: rgba(34, 102, 142);
+
   }
   
   .avatar-section {
     display: flex;
     align-items: center;
-    background-color: #4a90e2;
+    background-color: rgba(34, 102, 142);
     padding: 20px;
     border-radius: 8px;
     color: white;
@@ -114,8 +118,9 @@
 
 .cancel-button {
     background-color: transparent; /* Không có màu nền */
-    border: 2px solid #007bff; /* Viền màu xanh biển */
-    color: #007bff; /* Màu chữ xanh biển */
+    border: 2px solid #22668E; /* Viền màu xanh biển */
+    color: #22668E; /* Màu chữ xanh biển */
+    border-radius: 10px; /* Bo tròn viền */
     padding: 10px 20px; /* Khoảng cách trong nút */
     cursor: pointer; /* Con trỏ tay khi hover */
 }
@@ -125,8 +130,9 @@
 }
 
 .save-button {
-    background-color: #007bff; /* Nền màu xanh biển */
-    border: 2px solid #007bff; /* Viền màu xanh biển */
+    background-color: #22668E; /* Nền màu xanh biển */
+    border: 2px solid #22668E; /* Viền màu xanh biển */
+    border-radius: 10px; /* Bo tròn viền */
     color: white; /* Màu chữ trắng */
     padding: 10px 20px; /* Khoảng cách trong nút */
     cursor: pointer; /* Con trỏ tay khi hover */
@@ -134,6 +140,9 @@
 
 .save-button:hover {
     background-color: #0056b3; /* Nền tối hơn khi hover */
+}
+hr{
+  margin: 0px 20px;
 }
 
 

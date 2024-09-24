@@ -1,66 +1,101 @@
+/* Các thuộc tính dùng chung cho tất cả các ô input */
+.input-field {
+  border: 2px solid #000000;  /* Viền xung quanh */
+  padding: 5px;            /* Khoảng cách bên trong */
+  border-radius: 4px;      /* Bo góc viền */
+  background-color: #fff;  /* Màu nền */
+  white-space: pre-wrap;   /* Hiển thị xuống dòng khi có quá nhiều nội dung */
+  overflow-wrap: break-word; /* Tự ngắt từ nếu quá dài */
+}
+
+/* Ô input thông thường */
+.input-normal {
+  min-height: 20px;        /* Chiều cao mặc định là 20px */
+  width: 300px;            /* Chiều rộng cố định là 300px */
+}
+
+/* Ô input rộng hơn (cho các trường đặc biệt) */
+.input-wide {
+  min-height: 40px;       /* Chiều cao mặc định 40px cho input rộng */
+  width: 1000px;          /* Chiều rộng cố định 1000px */
+}
+
+/* Form container */
 .outer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none;
+    max-height: none;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .form-title {
-    color: #007bff;
+    background-color: #f0f8ff;
+}
+
+.form-title {
+    color: #22668E;
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 24px;
-  }
-  
-  .form-container {
-    width: 100%;
-    background-color: #f0f8ff;
+    margin-left: 110px;
+}
+
+.form-container {
+    width: -webkit-fill-available;
+    background-color: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-group {
+    margin: 0px 110px;
+}
+
+.form-group {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
     flex-wrap: wrap;
-  }
-  
-  label {
+    align-items: center;
+}
+
+label {
     flex: 1;
     font-weight: bold;
-  }
-  
-  input, textarea {
+}
+
+input, textarea {
     flex: 2;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .submit-button {
+}
+
+/* Nút submit */
+.submit-button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #22668E;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     align-self: flex-end; /* Đưa nút sang bên phải trong form */
-  }
-  
-  .submit-button:hover {
+}
+
+.submit-button:hover {
     background-color: #0056b3;
-  }
-  
-  .note {
-    font-size: 12px;
-    color: red;
-  }
-  
+}
+
+.note {
+  font-size: 16px;
+}
+
+.note .note-warning {
+  color: red;
+  font-weight: bold;
+}
+
+.note .note-content {
+  color: black;
+  font-weight: bold;
+}
+.bold-text {
+  font-weight: bold;
+}

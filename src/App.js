@@ -11,6 +11,7 @@ import LienHe from "./Pages/LienHe/LienHe";
 import Tintuc from "./Pages/TinTuc/Tintuc";
 import HosoAdd from "./Pages/HoSoBA/HosoAdd"
 import Hoso from "./Pages/HoSoBA/Hoso"
+import HosoUpdate from "./Pages/HoSoBA/HosoUpdate"
 import TaiKhoan from "./Pages/TaiKhoan/TaiKhoan"
 import TaiKhoanUpdate from "./Pages/TaiKhoan/TaiKhoanUpdate"
 
@@ -26,11 +27,16 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/trangchu" element={<TrangChu />} />
-          <Route path="/datkham" element={<TaiKhoanUpdate />} />
+          <Route path="/datkham" element={<DatKham />} />
           <Route path="/gioithieu" element={<Gioithieu />} />
           <Route path="/bacsi" element={<Bacsi />} />
           <Route path="/lienhe" element={<LienHe />} />
           <Route path="/tintuc" element={<Tintuc />} />
+          <Route path="/taikhoan" element={<TaiKhoan />} />
+          <Route path="/capnhattaikhoan" element={<TaiKhoanUpdate />} />
+          <Route path="/hosobenhan" element={<Hoso />} />
+          <Route path="/taohoso" element={<HosoAdd />} />
+          <Route path="/capnhathoso" element={<HosoUpdate />} />
         </Routes>
       </div>
     </Router>

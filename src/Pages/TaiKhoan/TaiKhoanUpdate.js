@@ -11,9 +11,10 @@ function TaiKhoanUpdate() {
     phone: '',
   });
 
+  const navigate = useNavigate();
+  
   const handleCancel = () => {
-    // Chuyển hướng đến trang khác
-    alert('Không biết làm') // Thay đổi '/another-page' thành đường dẫn bạn muốn
+    navigate('/TaiKhoan');
   };
 
   const handleSave = () => {

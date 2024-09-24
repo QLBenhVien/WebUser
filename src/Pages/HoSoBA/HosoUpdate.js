@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './HosoAdd.css'; // Import file CSS
+import './HosoUpdate.css'; // Import file CSS
 
 
-function HosoAdd() {
+function HosoUpdate() {
   const navigate = useNavigate(); // Để điều hướng giữa các trang
   // State quản lý dữ liệu form
   const [formData, setFormData] = useState({
@@ -20,6 +20,15 @@ function HosoAdd() {
     tienSuBanThan: '',
   });
 
+//   const handleEdit = () => {
+//     navigate('/');
+
+//   };
+
+  const handleCancel = () => {
+    navigate('/hosobenhan');
+
+  };
   // Hàm xử lý khi nhập liệu
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +44,7 @@ function HosoAdd() {
 
   return (
     <div className="outer-container">
-      <h2 className="form-title">TẠO HỒ SƠ BỆNH ÁN</h2>
+      <h2 className="form-title">SỬA HỒ SƠ BỆNH ÁN</h2>
       <form className="form-container" onSubmit={handleSubmit}>
         
         {/* Các trường thông thường */}
@@ -171,11 +180,14 @@ function HosoAdd() {
           <span className="note-content"> Những mục được đánh dấu * vui lòng không để trống</span>
         </p>
         
-        <button type="submit" className="submit-button">Tạo</button>
+        <div className="button-group">
+          <button type="button" className="submit-button" >Lưu thay đổi </button>
+          <button type="button" className="submit-button" onClick={handleCancel}>Đóng</button>
+        </div>
       </form>
     </div>
   );
 } 
 
-export default HosoAdd;
+export default HosoUpdate;
 
